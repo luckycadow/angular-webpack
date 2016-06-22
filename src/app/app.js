@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 import '../style/app.css';
+import legacy from './legacy';
 
 let app = () => {
   return {
@@ -18,7 +19,7 @@ class AppCtrl {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [])
+angular.module(MODULE_NAME, [legacy])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl);
 
